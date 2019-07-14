@@ -1,0 +1,27 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+<div class="text-center">
+    <s *ngFor="let carta of cartasSeq">
+        <div (click)="removerDaSequencia(carta)" class="card {{ carta.clas_css }}"></div>
+    </s>
+    <br>
+
+    <button (click)="verificar()" class="btn btn-info btn-md">verificar</button>
+    <button (click)="liparSequencia()" class="btn btn-warning btn-md">limpar</button>
+    <br>
+    <br>
+    <span class="alert alert-info" role="alert">
+        {{ valido }}
+    </span>
+</div>
+
+<br>
+<br>
+<s *ngFor="let carta of cartasList">
+    <div (click)="addNaSequencia(carta)" class="card {{ carta.clas_css }}"></div>
+</s>
